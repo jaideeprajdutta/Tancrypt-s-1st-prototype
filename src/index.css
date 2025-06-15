@@ -1,0 +1,167 @@
+/* Bootstrap CSS */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+/* Global Styles */
+:root {
+  --bs-font-sans-serif: 'Inter', system-ui, -apple-system, sans-serif;
+  --tancrypt-primary: #0066CC;
+  --tancrypt-secondary: #17A2B8;
+  --tancrypt-accent: #FD7E14;
+  --tancrypt-success: #28A745;
+  --tancrypt-warning: #FFC107;
+  --tancrypt-danger: #DC3545;
+  --tancrypt-dark: #212529;
+  --tancrypt-light: #F8F9FA;
+  --border-radius: 0.5rem;
+  --box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  --box-shadow-lg: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+[data-bs-theme="dark"] {
+  --tancrypt-light: #343A40;
+  --bs-body-bg: #1a1a1a;
+  --bs-body-color: #e9ecef;
+}
+
+body {
+  font-family: var(--bs-font-sans-serif);
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+  line-height: 1.6;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--tancrypt-primary) !important;
+}
+
+.btn-primary {
+  background-color: var(--tancrypt-primary);
+  border-color: var(--tancrypt-primary);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+  transform: translateY(-1px);
+}
+
+.btn-outline-primary {
+  color: var(--tancrypt-primary);
+  border-color: var(--tancrypt-primary);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--tancrypt-primary);
+  border-color: var(--tancrypt-primary);
+}
+
+.card {
+  border: none;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: var(--box-shadow-lg);
+  transform: translateY(-2px);
+}
+
+.card-header {
+  background-color: transparent;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  font-weight: 600;
+}
+
+.table {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.badge {
+  font-weight: 500;
+  padding: 0.5em 0.75em;
+}
+
+.form-control, .form-select {
+  border-radius: var(--border-radius);
+  border: 1px solid #dee2e6;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--tancrypt-primary);
+  box-shadow: 0 0 0 0.2rem rgba(0, 102, 204, 0.25);
+}
+
+.auth-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--tancrypt-primary) 0%, var(--tancrypt-secondary) 100%);
+}
+
+.dashboard-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+[data-bs-theme="dark"] .dashboard-card {
+  background: linear-gradient(135deg, #2c3034 0%, #343a40 100%);
+}
+
+.stats-card {
+  border-left: 4px solid var(--tancrypt-primary);
+}
+
+.stats-card.secondary {
+  border-left-color: var(--tancrypt-secondary);
+}
+
+.stats-card.accent {
+  border-left-color: var(--tancrypt-accent);
+}
+
+.stats-card.success {
+  border-left-color: var(--tancrypt-success);
+}
+
+.loading-spinner {
+  width: 1rem;
+  height: 1rem;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 0.25rem 0.5rem;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.dropdown-menu {
+  border: none;
+  box-shadow: var(--box-shadow-lg);
+  border-radius: var(--border-radius);
+}
+
+.theme-toggle {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
